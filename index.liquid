@@ -1,7 +1,9 @@
 ---
 layout: layout.liquid
-title: 11ty Boilerplate
+title: What's in a Name?
 ---
 
-<h1>Yet Another 11ty <strong>Boilerplate</strong></h1>
-<img alt="pine" src="/images/pine.png" width="50" />
+<div x-data="{names: ['Sheldon', 'Amy', 'Penny', 'Leonard', 'Howard', 'Bernadette', 'Raj', 'Stuart', 'Mary', 'George'], name: ''}">
+    <button x-on:click="name = names[Math.floor(Math.random() * 10)]">Generate A Name!</button>
+    <h1 x-text="name"></h1>
+</div>
